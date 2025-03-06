@@ -1,0 +1,17 @@
+daily-report:
+  prompt: >
+    Refine the following data. Keep list the order unchanged. Input format is like
+    list of {'record': [CONTENT TO REFINE]}.
+    You should refine the content wrapped using square brackets
+
+weekly-report:
+  prompt: >
+    You will be provided 5 daily records. You are required to write a report from that data.
+    It's like writing a report of a week based on the data provided. Skip holidays.
+    Output should be a plain text. Should only contain one paragraph
+
+monthly-report:
+  prompt: >
+    You will be provided 20 daily records. You are required to write a report from that data.
+    It's like writing a report of a month based on the data provided. Skip holidays.
+    Output should be a plain text. Should only contain one paragraph
