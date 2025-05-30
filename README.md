@@ -2,7 +2,7 @@
 
 ## Usage
 
-Use the example.xlsx files as the template for the diary. The diary will be written in the same format as the example.xlsx file. Duplicate the existing sheet and rename it for each new month. You just have to fill the Date and Description columns only.
+Use the example.xlsx files as the template for the diary. The diary will be written in the same format as the example.xlsx file. Duplicate the existing sheet and rename it for each new month. You have to fill the Date and Description columns only.
 
 ### Installation
 
@@ -32,7 +32,7 @@ Prompts are saved in `prompts.yaml` file. You can customize the prompts by editi
   * Purpose: Refine daily records
 
 * **Weekly Report**
-  * Purpose: Generate weekly report from daily reports
+  * Purpose: Generate the weekly report from daily reports
 
 * **Monthly Report**
-  * Purpose: Generate monthly report from weekly reports
+  * Purpose: Generate the monthly report from weekly reports
