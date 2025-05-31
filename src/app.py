@@ -1,10 +1,11 @@
 import gradio as gr
 from excel import ExcelHandler
 from llm import refine_data_with_llm, generate_weekly_summary, generate_monthly_summary
+from openai.types.chat import ChatCompletionContentPartTextParam
 from record import DailyRecord
 
 def load_excel():
-    excel = ExcelHandler('example.xlsx', ['February', 'March'])
+    excel = ExcelHandler('../example.xlsx', ['February', 'March'])
     return excel
 
 def process_records(selected_months):
@@ -19,7 +20,7 @@ def process_records(selected_months):
         
         # Read and refine daily records
         column_b = excel.read_column('B')
-        records = [str(DailyRecord(record=record).model_dump()) for record in column_b]
+        records = [ChatCompletionContentPartTextParam(text=DailyRecord(record=record).model_dump(), type="text") for record in column_b]
         data = refine_data_with_llm(records)
         refined_records[sheet] = data
         excel.write_column('E', data)
